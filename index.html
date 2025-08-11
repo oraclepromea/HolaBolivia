@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Bolivia Travel - Tours y Experiencias Únicas en Bolivia</title>
+    <meta name="description" content="Descubre Bolivia con Hola Bolivia Travel. Tours únicos desde La Paz a todos los destinos de Bolivia. Salar de Uyuni, Amazonía, y más.">
+    <meta name="keywords" content="Bolivia, tours, viajes, La Paz, Salar de Uyuni, turismo, aventura">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>🇧🇴 Hola Bolivia Travel</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#tours" class="nav-link">Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sobre-nosotros" class="nav-link">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#testimonios" class="nav-link">Testimonios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contacto" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Descubre la Magia de Bolivia</h1>
+            <p class="hero-subtitle">Vive experiencias únicas con los mejores tours desde La Paz</p>
+            <a href="#tours" class="btn btn-primary">Explorar Tours</a>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section id="tours" class="tours">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Tours</h2>
+                <p>Explora los destinos más increíbles de Bolivia con nuestros tours especializados</p>
+            </div>
+            
+            <div class="tours-grid">
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="images/salar-uyuni.jpg" alt="Salar de Uyuni">
+                        <div class="tour-overlay">
+                            <span class="tour-price">$120 USD</span>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Salar de Uyuni</h3>
+                        <p>El desierto de sal más grande del mundo. Una experiencia mágica de 3 días y 2 noches.</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-clock"></i> 3 días</span>
+                            <span><i class="fas fa-users"></i> Grupos pequeños</span>
+                            <span><i class="fas fa-star"></i> 4.9/5</span>
+                        </div>
+                        <button class="btn btn-outline">Ver Detalles</button>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="images/titicaca.jpg" alt="Lago Titicaca">
+                        <div class="tour-overlay">
+                            <span class="tour-price">$65 USD</span>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Lago Titicaca</h3>
+                        <p>Visita las islas flotantes de los Uros y la Isla del Sol en el lago navegable más alto del mundo.</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-clock"></i> 1 día</span>
+                            <span><i class="fas fa-users"></i> Grupos pequeños</span>
+                            <span><i class="fas fa-star"></i> 4.8/5</span>
+                        </div>
+                        <button class="btn btn-outline">Ver Detalles</button>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="images/valle-luna.jpg" alt="Valle de la Luna">
+                        <div class="tour-overlay">
+                            <span class="tour-price">$35 USD</span>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Valle de la Luna</h3>
+                        <p>Formaciones rocosas únicas cerca de La Paz. Paisajes que parecen de otro planeta.</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-clock"></i> Medio día</span>
+                            <span><i class="fas fa-users"></i> Grupos pequeños</span>
+                            <span><i class="fas fa-star"></i> 4.7/5</span>
+                        </div>
+                        <button class="btn btn-outline">Ver Detalles</button>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="images/madidi.jpg" alt="Parque Madidi">
+                        <div class="tour-overlay">
+                            <span class="tour-price">$180 USD</span>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Parque Nacional Madidi</h3>
+                        <p>Aventura en la selva amazónica boliviana. Biodiversidad única y experiencias auténticas.</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-clock"></i> 4 días</span>
+                            <span><i class="fas fa-users"></i> Grupos pequeños</span>
+                            <span><i class="fas fa-star"></i> 4.9/5</span>
+                        </div>
+                        <button class="btn btn-outline">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-nosotros" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sobre Hola Bolivia Travel</h2>
+                    <p>Somos una agencia de viajes especializada en tours por Bolivia, con base en La Paz. Nuestro objetivo es mostrar la belleza y diversidad cultural de nuestro país a través de experiencias auténticas y memorables.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>Experiencia Local</h4>
+                                <p>Guías locales con conocimiento profundo de cada destino</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Seguridad Garantizada</h4>
+                                <p>Tours seguros con todos los permisos y seguros necesarios</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Atención Personalizada</h4>
+                                <p>Grupos pequeños para una experiencia más íntima</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Clientes Satisfechos</p>
+                        </div>
+                        <div class="stat">
+                            <h3>15+</h3>
+                            <p>Destinos</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5</h3>
+                            <p>Años de Experiencia</p>
+                        </div>
+                        <div class="stat">
+                            <h3>4.9</h3>
+                            <p>Rating Promedio</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/team.jpg" alt="Equipo Hola Bolivia Travel">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lo Que Dicen Nuestros Clientes</h2>
+                <p>Experiencias reales de viajeros que han explorado Bolivia con nosotros</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Una experiencia increíble en el Salar de Uyuni. El equipo de Hola Bolivia Travel hizo que cada momento fuera especial. Totalmente recomendado!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/client1.jpg" alt="María García">
+                        <div>
+                            <h4>María García</h4>
+                            <span>España</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"El tour al Lago Titicaca fue fantástico. Los guías muy conocedores y la organización perfecta. Una empresa muy profesional."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/client2.jpg" alt="John Smith">
+                        <div>
+                            <h4>John Smith</h4>
+                            <span>Estados Unidos</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Aventura amazónica inolvidable en Madidi. Vimos una biodiversidad increíble y el equipo cuidó cada detalle. ¡Volveremos!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/client3.jpg" alt="Sophie Laurent">
+                        <div>
+                            <h4>Sophie Laurent</h4>
+                            <span>Francia</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contáctanos</h2>
+                <p>¿Listo para tu próxima aventura? Estamos aquí para ayudarte a planificar el viaje perfecto</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Ubicación</h4>
+                            <p>La Paz, Bolivia<br>Calle Sagarnaga, Zona Centro</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+591 2 2XX-XXXX<br>+591 7XX-XXXXX</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@holaboliviatravel.com<br>tours@holaboliviatravel.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horarios</h4>
+                            <p>Lun - Vie: 8:00 - 18:00<br>Sáb: 9:00 - 16:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Síguenos</h4>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/holaboliviatravel" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/holaboliviatravel" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-tripadvisor"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Tu email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Tu teléfono">
+                        </div>
+                        <div class="form-group">
+                            <select id="tour" name="tour" required>
+                                <option value="">Selecciona un tour</option>
+                                <option value="salar-uyuni">Salar de Uyuni</option>
+                                <option value="titicaca">Lago Titicaca</option>
+                                <option value="valle-luna">Valle de la Luna</option>
+                                <option value="madidi">Parque Nacional Madidi</option>
+                                <option value="personalizado">Tour Personalizado</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🇧🇴 Hola Bolivia Travel</h3>
+                    <p>Tu puerta de entrada a las maravillas de Bolivia. Creamos experiencias únicas e inolvidables.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/holaboliviatravel" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/holaboliviatravel" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-tripadvisor"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Tours Populares</h4>
+                    <ul>
+                        <li><a href="#">Salar de Uyuni</a></li>
+                        <li><a href="#">Lago Titicaca</a></li>
+                        <li><a href="#">Valle de la Luna</a></li>
+                        <li><a href="#">Parque Nacional Madidi</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> La Paz, Bolivia</li>
+                        <li><i class="fas fa-phone"></i> +591 2 2XX-XXXX</li>
+                        <li><i class="fas fa-envelope"></i> info@holaboliviatravel.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hola Bolivia Travel. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
