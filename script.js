@@ -71,47 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Contact Form Handling
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        tour: document.getElementById('tour').value,
-        message: document.getElementById('message').value
-    };
-    
-    // Validate form
-    if (!formData.name || !formData.email || !formData.tour || !formData.message) {
-        showNotification('Por favor completa todos los campos requeridos.', 'error');
-        return;
-    }
-    
-    if (!isValidEmail(formData.email)) {
-        showNotification('Por favor ingresa un email válido.', 'error');
-        return;
-    }
-    
-    // Show loading state
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Enviando...';
-    submitBtn.disabled = true;
-    
-    // Simulate form submission (replace with actual backend integration)
-    setTimeout(() => {
-        showNotification('¡Mensaje enviado correctamente! Te contactaremos pronto.', 'success');
-        contactForm.reset();
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }, 2000);
-});
-
 // Email validation
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -218,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Lazy loading for images
+// Lazy loading for images - REMOVED OPACITY EFFECTS
 document.addEventListener('DOMContentLoaded', () => {
     const images = document.querySelectorAll('img[src]');
     
@@ -226,11 +185,11 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const img = entry.target;
-                img.style.opacity = '0';
-                img.style.transition = 'opacity 0.3s ease';
                 
-                img.onload = () => {
-                    img.style.opacity = '1';
+                // Images load immediately without opacity animation
+                // Add error handling only
+                img.onerror = () => {
+                    console.warn(`Failed to load image: ${img.src}`);
                 };
                 
                 imageObserver.unobserve(img);
@@ -286,7 +245,6 @@ const loadingStyles = `
     @keyframes spin {
         0% { transform: translate(-50%, -50%) rotate(0deg); }
         100% { transform: translate(-50%, -50%) rotate(360deg); }
-    }
 `;
 
 // Inject loading styles
@@ -594,7 +552,7 @@ class LanguageToggle {
             if (p) p.textContent = this.translations[lang]['gallery-subtitle'];
         }
 
-        // Why choose us section
+        // Why choose us section - FIXED SELECTOR
         const whyChooseSection = document.querySelector('.why-choose_us .section-header');
         if (whyChooseSection) {
             const h2 = whyChooseSection.querySelector('h2');
@@ -883,17 +841,9 @@ function implementLazyLoading() {
             if (entry.isIntersecting) {
                 const img = entry.target;
                 
-                // Add loading animation
-                img.style.opacity = '0';
-                img.style.transition = 'opacity 0.5s ease';
-                
-                img.onload = () => {
-                    img.style.opacity = '1';
-                };
-                
-                // Add error handling
+                // Images load immediately without opacity animation
+                // Add error handling only
                 img.onerror = () => {
-                    img.style.opacity = '0.5';
                     console.warn(`Failed to load image: ${img.src}`);
                 };
                 
