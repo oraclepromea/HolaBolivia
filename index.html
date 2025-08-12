@@ -51,13 +51,50 @@
         </nav>
     </header>
 
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button id="lang-es" class="lang-btn active">ES</button>
+        <button id="lang-en" class="lang-btn">EN</button>
+    </div>
+
+    <!-- Trust Badges Bar -->
+    <section class="trust-badges">
+        <div class="container">
+            <div class="badges-container">
+                <div class="badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Agencia Autorizada</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-award"></i>
+                    <span>5 Años de Experiencia</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-users"></i>
+                    <span>500+ Clientes Satisfechos</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-star"></i>
+                    <span>4.9/5 Rating Promedio</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-headset"></i>
+                    <span>Soporte 24/7</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">Descubre la Magia de Bolivia</h1>
-            <p class="hero-subtitle">Vive experiencias únicas con los mejores tours desde La Paz</p>
-            <a href="#tours" class="btn btn-primary">Explorar Tours</a>
+            <h1 class="hero-title" data-es="Descubre la Magia de Bolivia" data-en="Discover the Magic of Bolivia">Descubre la Magia de Bolivia</h1>
+            <p class="hero-subtitle" data-es="Vive experiencias únicas con los mejores tours desde La Paz" data-en="Live unique experiences with the best tours from La Paz">Vive experiencias únicas con los mejores tours desde La Paz</p>
+            <div class="hero-buttons">
+                <a href="#tours" class="btn btn-primary" data-es="Explorar Tours" data-en="Explore Tours">Explorar Tours</a>
+                <a href="#galeria" class="btn btn-secondary" data-es="Ver Galería" data-en="View Gallery">Ver Galería</a>
+            </div>
         </div>
         <div class="hero-scroll">
             <i class="fas fa-chevron-down"></i>
@@ -197,6 +234,116 @@
                             <i class="fab fa-whatsapp"></i> Reservar por WhatsApp
                         </a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-es="Galería de Bolivia" data-en="Bolivia Gallery">Galería de Bolivia</h2>
+                <p data-es="Descubre la belleza natural de Bolivia a través de nuestras fotografías" data-en="Discover Bolivia's natural beauty through our photography">Descubre la belleza natural de Bolivia a través de nuestras fotografías</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="images/Uyuni Night Stars.jpg" alt="Salar de Uyuni Nocturno">
+                    <div class="gallery-overlay">
+                        <h3>Salar de Uyuni</h3>
+                        <p>Cielo estrellado</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Flamingos.jpg" alt="Flamingos en Bolivia">
+                    <div class="gallery-overlay">
+                        <h3>Laguna Colorada</h3>
+                        <p>Flamingos rosados</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Illamin sunset.jpg" alt="Atardecer en Illimani">
+                    <div class="gallery-overlay">
+                        <h3>Illimani</h3>
+                        <p>Atardecer andino</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Lllama and Red Water.jpg" alt="Llama en laguna roja">
+                    <div class="gallery-overlay">
+                        <h3>Laguna Roja</h3>
+                        <p>Vida silvestre</p>
+                    </div>
+                </div>
+                <div class="gallery-item large">
+                    <img src="images/Uyuni Day Woman .jpg" alt="Exploradora en Salar de Uyuni">
+                    <div class="gallery-overlay">
+                        <h3>Aventura</h3>
+                        <p>Explorando el infinito</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Desert in Bolivia.jpg" alt="Desierto boliviano">
+                    <div class="gallery-overlay">
+                        <h3>Desierto</h3>
+                        <p>Paisajes únicos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-es="¿Por Qué Elegirnos?" data-en="Why Choose Us?">¿Por Qué Elegirnos?</h2>
+                <p data-es="Razones que nos convierten en tu mejor opción para explorar Bolivia" data-en="Reasons that make us your best choice to explore Bolivia">Razones que nos convierten en tu mejor opción para explorar Bolivia</p>
+            </div>
+            
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Agencia Certificada</h3>
+                    <p>Contamos con todas las licencias y certificaciones oficiales para operar turismo en Bolivia</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Guías Expertos</h3>
+                    <p>Nuestros guías locales conocen cada rincón y te mostrarán lugares secretos fuera de las rutas tradicionales</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Seguridad Total</h3>
+                    <p>Todos nuestros tours incluyen seguro de viaje, equipos de seguridad y protocolos establecidos</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Precios Justos</h3>
+                    <p>Ofrecemos las mejores tarifas del mercado sin comprometer la calidad del servicio</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Atención 24/7</h3>
+                    <p>Estamos disponibles en todo momento para resolver cualquier consulta o emergencia</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Turismo Responsable</h3>
+                    <p>Promovemos el turismo sostenible y el respeto por las comunidades locales y el medio ambiente</p>
                 </div>
             </div>
         </div>

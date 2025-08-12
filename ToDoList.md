@@ -5,3 +5,7 @@
 - [x] For the hero image, can you remove the opacity so the image looks better
 - [x] Can you add a tripadvisor icon of a map for the links. 
 - [x] In the footer can you make the social media links look better, currently they are dark blue and off theme and the styling is off.
+
+For the tours can you have the Whatsapp button at the bottom at the same level for each tour for consistency and asthetics
+
+For the "Start your adventure today!" section can you have this span the width of the website, currently it is off to the left side and looks unbalanced, have it span with the width so it looks better and even.
