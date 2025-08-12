@@ -1,17 +1,17 @@
-/* Language Toggle */
-.language-toggle {
-    position: fixed;
-    top: 100px;
-    right: 20px;
-    z-index: 1001;
-    display: flex;
-    background: white;
-    border-radius: 25px;
-    box-shadow: 0 5px 15px rgba(32, 178, 170, 0.2);
-    overflow: hidden;
+/* Language Toggle in Navigation */
+.nav-language {
+    margin-left: 1rem;
 }
 
-.lang-btn {
+.nav-language-toggle {
+    display: flex;
+    background: rgba(32, 178, 170, 0.1);
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid rgba(32, 178, 170, 0.2);
+}
+
+.nav-lang-btn {
     padding: 8px 16px;
     border: none;
     background: transparent;
@@ -19,15 +19,16 @@
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: 500;
+    font-size: 0.9rem;
 }
 
-.lang-btn.active {
+.nav-lang-btn.active {
     background: #20b2aa;
     color: white;
 }
 
-.lang-btn:hover:not(.active) {
-    background: rgba(32, 178, 170, 0.1);
+.nav-lang-btn:hover:not(.active) {
+    background: rgba(32, 178, 170, 0.2);
     color: #20b2aa;
 }
 
@@ -99,8 +100,10 @@
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 250px);
-    gap: 1rem;
+    grid-template-rows: repeat(6, 200px);
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .gallery-item {
@@ -114,6 +117,87 @@
 .gallery-item.large {
     grid-row: span 2;
     grid-column: span 2;
+}
+
+/* Specific positioning for perfect alignment */
+.gallery-item:nth-child(1) { /* Uyuni Night Stars - large */
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.gallery-item:nth-child(2) { /* Flamingos */
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.gallery-item:nth-child(3) { /* Illimani sunset */
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.gallery-item:nth-child(4) { /* Valle de la Luna */
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.gallery-item:nth-child(5) { /* Llama and Red Water */
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.gallery-item:nth-child(6) { /* Uyuni Day Woman - large - moved to right side */
+    grid-column: 3 / 5;
+    grid-row: 3 / 5;
+}
+
+.gallery-item:nth-child(7) { /* Desert in Bolivia - moved to left */
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.gallery-item:nth-child(8) { /* LLamas in Nature - moved to left */
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.gallery-item:nth-child(9) { /* Sunset in Uyuni - moved to left */
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.gallery-item:nth-child(10) { /* Valle de las Ánimas - moved to left */
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.gallery-item:nth-child(11) { /* Mountains */
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.gallery-item:nth-child(12) { /* Snow Cheer */
+    grid-column: 2;
+    grid-row: 5;
+}
+
+.gallery-item:nth-child(13) { /* Charquini */
+    grid-column: 3;
+    grid-row: 5;
+}
+
+.gallery-item:nth-child(14) { /* Pyramid - spans 2 rows */
+    grid-column: 4;
+    grid-row: 5 / 7;
+}
+
+.gallery-item:nth-child(15) { /* Uyuni Night Sky */
+    grid-column: 1;
+    grid-row: 6;
+}
+
+.gallery-item:nth-child(16) { /* Bolivia! - spans 2 columns */
+    grid-column: 2 / 4;
+    grid-row: 6;
 }
 
 .gallery-item:hover {
@@ -157,6 +241,52 @@
     margin: 0;
     font-size: 0.9rem;
     opacity: 0.9;
+}
+
+/* Responsive Gallery */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(7, 180px);
+        gap: 12px;
+    }
+    
+    .gallery-item.large {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+    
+    /* Reset positioning for tablet */
+    .gallery-item:nth-child(n) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(10, 200px);
+        gap: 10px;
+    }
+    
+    .gallery-item.large {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(16, 250px);
+        gap: 8px;
+    }
+    
+    .gallery-item.large {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
 }
 
 /* Why Choose Us Section */
@@ -402,7 +532,7 @@ p {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('images/Uyuni Night Stars.jpg');
+    background: url('images/Hero Image 2- Uyuni.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -498,6 +628,9 @@ p {
     box-shadow: 0 10px 30px rgba(32, 178, 170, 0.1);
     transition: all 0.3s ease;
     border: 1px solid rgba(32, 178, 170, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .tour-card:hover {
@@ -538,6 +671,9 @@ p {
 
 .tour-content {
     padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .tour-content h3 {
@@ -548,6 +684,7 @@ p {
 .tour-content p {
     margin-bottom: 1.5rem;
     line-height: 1.6;
+    flex: 1;
 }
 
 .tour-features {
@@ -567,6 +704,13 @@ p {
 
 .tour-features i {
     color: #20b2aa;
+}
+
+.tour-content .btn-outline {
+    margin-top: auto;
+    align-self: flex-start;
+    width: 100%;
+    text-align: center;
 }
 
 /* About Section */
@@ -716,12 +860,13 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: start;
+    margin-bottom: 4rem;
 }
 
 .contact-content {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .contact-card {
@@ -788,25 +933,72 @@ p {
     color: #888 !important;
 }
 
+.contact-image {
+    position: relative;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(32, 178, 170, 0.1);
+}
+
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 2rem;
+}
+
+.contact-quote {
+    text-align: center;
+}
+
+.contact-quote i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #20b2aa;
+}
+
+.contact-quote p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 0;
+    color: white;
+}
+
 .contact-cta {
     background: white;
-    padding: 2.5rem;
+    padding: 3rem 2.5rem;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(32, 178, 170, 0.1);
     border: 1px solid rgba(32, 178, 170, 0.1);
     text-align: center;
+    grid-column: 1 / -1;
+    max-width: 800px;
+    width: 100%;
+    margin: 2rem auto 0 auto;
+    justify-self: center;
 }
 
 .contact-cta h3 {
     color: #20b2aa;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .contact-cta > p {
     color: #666;
     margin-bottom: 2rem;
     line-height: 1.6;
+    font-size: 1.1rem;
 }
 
 .contact-buttons {
@@ -814,6 +1006,9 @@ p {
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 2.5rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn-contact {
@@ -821,50 +1016,48 @@ p {
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.3s ease;
-    font-size: 1rem;
+    border: 2px solid transparent;
 }
 
 .btn-contact.whatsapp {
-    background: linear-gradient(135deg, #25d366, #20b038);
+    background: #25d366;
     color: white;
 }
 
 .btn-contact.whatsapp:hover {
-    background: linear-gradient(135deg, #20b038, #1a8f2f);
+    background: #1ea952;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
 }
 
 .btn-contact.phone {
-    background: linear-gradient(135deg, #20b2aa, #48d1cc);
+    background: #20b2aa;
     color: white;
 }
 
 .btn-contact.phone:hover {
-    background: linear-gradient(135deg, #1a9b94, #3dbfba);
+    background: #1a9b94;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(32, 178, 170, 0.3);
 }
 
 .btn-contact.email {
-    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-    color: white;
+    background: transparent;
+    color: #20b2aa;
+    border-color: #20b2aa;
 }
 
 .btn-contact.email:hover {
-    background: linear-gradient(135deg, #5f4fcf, #8b7fee);
+    background: #20b2aa;
+    color: white;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(108, 92, 231, 0.3);
 }
 
 .social-section {
-    border-top: 1px solid rgba(32, 178, 170, 0.1);
-    padding-top: 2rem;
+    margin-top: 2rem;
 }
 
 .social-section h4 {
@@ -882,104 +1075,52 @@ p {
 
 .social-icon {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    padding: 1rem;
-    border-radius: 15px;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
     text-decoration: none;
+    font-weight: 500;
     transition: all 0.3s ease;
-    color: white;
-    min-width: 80px;
+    border: 2px solid transparent;
+    min-width: 120px;
+    justify-content: center;
 }
 
 .social-icon.facebook {
-    background: linear-gradient(135deg, #1877f2, #42a5f5);
+    background: #1877f2;
+    color: white;
 }
 
 .social-icon.facebook:hover {
-    background: linear-gradient(135deg, #166fe5, #2196f3);
-    transform: translateY(-3px);
+    background: #166fe5;
+    transform: translateY(-2px);
 }
 
 .social-icon.instagram {
-    background: linear-gradient(135deg, #e1306c, #f56040);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
 }
 
 .social-icon.instagram:hover {
-    background: linear-gradient(135deg, #d62976, #fa7e1e);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 .social-icon.tripadvisor {
-    background: linear-gradient(135deg, #00af87, #00d4aa);
+    background: #00af87;
+    color: white;
 }
 
 .social-icon.tripadvisor:hover {
-    background: linear-gradient(135deg, #009d7a, #00c29a);
-    transform: translateY(-3px);
-}
-
-.social-icon i {
-    font-size: 1.5rem;
-}
-
-.social-icon span {
-    font-size: 0.8rem;
-    font-weight: 500;
-}
-
-.contact-image {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(32, 178, 170, 0.1);
-    height: 600px;
-}
-
-.contact-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.contact-image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(32, 178, 170, 0.7), rgba(72, 209, 204, 0.5));
-    display: flex;
-    align-items: flex-end;
-    padding: 2rem;
-}
-
-.contact-quote {
-    color: white;
-    text-align: center;
-    width: 100%;
-}
-
-.contact-quote i {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    opacity: 0.8;
-}
-
-.contact-quote p {
-    font-size: 1.2rem;
-    font-style: italic;
-    line-height: 1.5;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    background: #009874;
+    transform: translateY(-2px);
 }
 
 /* Footer */
 .footer {
     background: linear-gradient(135deg, #20b2aa, #1a9b94);
     color: white;
-    padding: 60px 0 20px;
+    padding: 50px 0 20px;
 }
 
 .footer-content {
@@ -989,15 +1130,16 @@ p {
     margin-bottom: 2rem;
 }
 
-.footer-section h3,
 .footer-section h4 {
     color: white;
     margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
 .footer-section p {
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
 .footer-section ul {
@@ -1009,9 +1151,12 @@ p {
 }
 
 .footer-section ul li a {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .footer-section ul li a:hover {
@@ -1019,47 +1164,781 @@ p {
 }
 
 .footer-section ul li i {
-    color: white;
-    margin-right: 10px;
-    width: 15px;
+    width: 16px;
+    color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-section .social-links {
+.social-links {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
 }
 
-.footer-section .social-links a {
+.social-links a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    color: white;
     text-decoration: none;
     transition: all 0.3s ease;
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 1.1rem;
 }
 
-.footer-section .social-links a:hover {
+.social-links a:hover {
     background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-3px);
-    border-color: white;
-}
-
-.footer-section .social-links a i {
-    font-size: 1.2rem;
-    margin: 0;
-    width: auto;
+    transform: translateY(-2px);
 }
 
 .footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.9);
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #20b2aa, #48d1cc);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #1a9b94, #3dbfba);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(32, 178, 170, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #20b2aa;
+    border: 2px solid #20b2aa;
+}
+
+.btn-outline:hover {
+    background: #20b2aa;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(32, 178, 170, 0.1);
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #20b2aa;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #20b2aa;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('images/Hero Image 2- Uyuni.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(32, 178, 170, 0.1));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: rgba(255,255,255,0.95);
+}
+
+.hero-scroll {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    color: white;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    color: #20b2aa;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Tours Section */
+.tours {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fffe, #f0fffe);
+}
+
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.tour-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(32, 178, 170, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(32, 178, 170, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tour-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(32, 178, 170, 0.2);
+}
+
+.tour-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.tour-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tour-card:hover .tour-image img {
+    transform: scale(1.1);
+}
+
+.tour-overlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.tour-price {
+    background: #20b2aa;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+.tour-content {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-content h3 {
+    color: #20b2aa;
+    margin-bottom: 1rem;
+}
+
+.tour-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.tour-features {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.tour-features span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.tour-features i {
+    color: #20b2aa;
+}
+
+.tour-content .btn-outline {
+    margin-top: auto;
+    align-self: flex-start;
+    width: 100%;
+    text-align: center;
+}
+
+/* About Section */
+.about {
+    padding: 100px 0;
+    background: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text h2 {
+    color: #20b2aa;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.about-features {
+    margin-bottom: 3rem;
+}
+
+.feature {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature i {
+    color: #20b2aa;
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+.feature h4 {
+    color: #20b2aa;
+    margin-bottom: 0.5rem;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    color: #20b2aa;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(32, 178, 170, 0.1);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fffe, #f0fffe);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(32, 178, 170, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(32, 178, 170, 0.1);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-content {
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-content i {
+    color: #20b2aa;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.testimonial-author {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.testimonial-author h4 {
+    color: #20b2aa;
+    margin-bottom: 0.25rem;
+}
+
+.testimonial-author span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.rating {
+    margin-top: 0.5rem;
+}
+
+.rating i {
+    color: #ffc107;
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fffe, #f0fffe);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    margin-bottom: 4rem;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(32, 178, 170, 0.1);
+    border: 1px solid rgba(32, 178, 170, 0.1);
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(32, 178, 170, 0.1);
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.contact-icon {
+    background: linear-gradient(135deg, #20b2aa, #48d1cc);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    box-shadow: 0 5px 15px rgba(32, 178, 170, 0.3);
+}
+
+.contact-details h4 {
+    color: #20b2aa;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-details p {
+    margin-bottom: 0.25rem;
+    color: #666;
+}
+
+.contact-details a {
+    color: #20b2aa;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #1a9b94;
+}
+
+.contact-address {
+    font-size: 0.9rem;
+    color: #888 !important;
+}
+
+.contact-image {
+    position: relative;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(32, 178, 170, 0.1);
+}
+
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 2rem;
+}
+
+.contact-quote {
+    text-align: center;
+}
+
+.contact-quote i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #20b2aa;
+}
+
+.contact-quote p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 0;
+    color: white;
+}
+
+.contact-cta {
+    background: white;
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(32, 178, 170, 0.1);
+    border: 1px solid rgba(32, 178, 170, 0.1);
+    text-align: center;
+    grid-column: 1 / -1;
+    max-width: 800px;
+    width: 100%;
+    margin: 2rem auto 0 auto;
+    justify-self: center;
+}
+
+.contact-cta h3 {
+    color: #20b2aa;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.contact-cta > p {
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-contact.whatsapp {
+    background: #25d366;
+    color: white;
+}
+
+.btn-contact.whatsapp:hover {
+    background: #1ea952;
+    transform: translateY(-2px);
+}
+
+.btn-contact.phone {
+    background: #20b2aa;
+    color: white;
+}
+
+.btn-contact.phone:hover {
+    background: #1a9b94;
+    transform: translateY(-2px);
+}
+
+.btn-contact.email {
+    background: transparent;
+    color: #20b2aa;
+    border-color: #20b2aa;
+}
+
+.btn-contact.email:hover {
+    background: #20b2aa;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.social-section {
+    margin-top: 2rem;
+}
+
+.social-section h4 {
+    color: #20b2aa;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.social-icons-large {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.social-icon.facebook {
+    background: #1877f2;
+    color: white;
+}
+
+.social-icon.facebook:hover {
+    background: #166fe5;
+    transform: translateY(-2px);
+}
+
+.social-icon.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+}
+
+.social-icon.instagram:hover {
+    transform: translateY(-2px);
+}
+
+.social-icon.tripadvisor {
+    background: #00af87;
+    color: white;
+}
+
+.social-icon.tripadvisor:hover {
+    background: #009874;
+    transform: translateY(-2px);
 }
 
 /* Responsive Design */
@@ -1250,12 +2129,12 @@ p {
 @media screen and (max-width: 768px) {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(6, 180px);
+        grid-template-rows: repeat(10, 200px);
     }
     
     .gallery-item.large {
-        grid-row: span 1;
-        grid-column: span 1;
+        grid-row: span 2;
+        grid-column: span 2;
     }
     
     .reasons-grid {
